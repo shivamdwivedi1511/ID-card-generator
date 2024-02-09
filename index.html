@@ -16,21 +16,30 @@
   <body>
     <h1 class="heading">ID Card Generator</h1>
     <div class="container">
-      <form>
+      <form onsubmit="return false">
         <div class="field">
           <label>name</label>
-          <input placeholder="enter name" type="text" />
+          <input id="name" placeholder="enter name" type="text" />
         </div>
         <div class="field">
           <label>college name</label>
-          <input placeholder="enter college name" type="text" />
+          <input id="college" placeholder="enter college name" type="text" />
         </div>
         <div class="field">
           <label>location</label>
-          <input placeholder="enter location" type="text" />
+          <input id="location" placeholder="enter location" type="text" />
         </div>
-        <button>submit</button>
+        <button onclick="generateCard()">submit</button>
       </form>
+      <div id="card">
+        <h2>ID Card</h2>
+        <ul class="list">
+            <li class="item"><span class="label">name</span><span class="value" id="name-val">some name</span></li>
+            <li class="item"><span class="label">college</span><span class="value" id="college-val">some clg name</span></li>
+            <li class="item"><span class="label">location</span><span class="value" id="location-val">some location</span></li>
+        </ul>
+      </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

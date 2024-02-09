@@ -4,7 +4,6 @@
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  height: 100%;
 }
 
 .heading {
@@ -19,10 +18,12 @@
   color: transparent;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 100px;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   height: 100%;
   max-height: 75%;
   justify-content: center;
@@ -44,31 +45,80 @@ form {
   width: 100%;
 }
 
-.field label{
-    text-transform: capitalize;
-
+.field label {
+  text-transform: capitalize;
 }
 
-.field input{
-    padding: 8px;
-    border-radius: 8px;
-    border-color: rgba(0, 0, 0, 0.086)
+.field input {
+  padding: 8px;
+  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.086);
 }
-form button{
-    padding: 8px;
-    width: 100%;
-    border-radius: 8px;
-    background-color: purple;
-    color: white;
-    border: 1px solid transparent;
-    margin-top: 16px;
-    text-transform: capitalize;
+form button {
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: purple;
+  color: white;
+  border: 1px solid transparent;
+  margin-top: 16px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+form button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+#card {
+  border: 1px dotted grey;
+  padding: 24px;
+  width: 400px;
+  margin-top: 40px;
+  display: none;
+}
+
+#card .list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#card .list .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#card .list .item span{
     font-size: 18px;
+    text-transform: capitalize;
 }
 
-form button:hover{
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    
+#card .list .item .label{
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+
+#card .list .item .value{
+    font-weight: 100;
+    color: rebeccapurple;
+}
+#card h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+  background: -webkit-linear-gradient(white, purple);
+  font-weight: 700;
+  background-clip: text;
+  color: transparent;
+}
+
+.field input.invalid{
+    border-color: red;
 }
